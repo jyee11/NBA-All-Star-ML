@@ -36,7 +36,7 @@
 
 # ##Cleaning the Data
 
-# Before I imported the data, I loaded the numpy, pandas, seaborn, and matplotlib.pyplot library so that I could properly clean and prep the data.
+# Before I imported the data, I loaded the numpy, and pandas library so that I could properly clean and prep the data.
 
 # In[1]:
 
@@ -85,72 +85,83 @@ for data in read_in_data:
 
 # In[6]:
 
-all_stars2008 = ["Allen Iverson", "Kobe Bryant", "Carmelo Anthony", "Tim Duncan", "Yao Ming", "Carlos Boozer",
-              "Steve Nash", "Dirk Nowitzki", "Chris Paul", "Brandon Roy", "Amar'e Stoudemire", "David West",
-              "Jason Kidd", "Dwyane Wade", "LeBron James", "Kevin Garnett", "Dwight Howard", "Ray Allen",
-              "Chauncey Billups", "Caron Butler", "Chris Bosh", "Richard Hamilton", "Antawn Jamison", "Joe Johnson",
-              "Paul Pierce", "Rasheed Wallace"]
+all_stars2008 = ["Allen Iverson", "Kobe Bryant", "Carmelo Anthony", "Tim Duncan", "Yao Ming", 
+                 "Carlos Boozer", "Steve Nash", "Dirk Nowitzki", "Chris Paul", "Brandon Roy", 
+                 "Amar'e Stoudemire", "David West", "Jason Kidd", "Dwyane Wade", "LeBron James", 
+                 "Kevin Garnett", "Dwight Howard", "Ray Allen", "Chauncey Billups", "Caron Butler", 
+                 "Chris Bosh", "Richard Hamilton", "Antawn Jamison", "Joe Johnson", "Paul Pierce", 
+                 "Rasheed Wallace"]
 
-all_stars2009 = ["Allen Iverson", "Dwyane Wade", "LeBron James", "Kevin Garnett", "Dwight Howard", "Ray Allen", 
-               "Devin Harris", "Joe Johnson", "Jameer Nelson", "Mo Williams", "Danny Granger", "Rashard Lewis", 
-               "Paul Pierce", "Chris Bosh", "Chris Paul", "Kobe Bryant", "Amar'e Stoudemire", "Tim Duncan",
-              "Yao Ming", "Chauncey Billups", "Tony Parker", "Brandon Roy", "Pau Gasol", "Dirk Nowitzki", 
+all_stars2009 = ["Allen Iverson", "Dwyane Wade", "LeBron James", "Kevin Garnett", "Dwight Howard", 
+                 "Ray Allen", "Devin Harris", "Joe Johnson", "Jameer Nelson", "Mo Williams", 
+                 "Danny Granger", "Rashard Lewis", "Paul Pierce", "Chris Bosh", "Chris Paul", 
+                 "Kobe Bryant", "Amar'e Stoudemire", "Tim Duncan","Yao Ming", "Chauncey Billups", 
+                 "Tony Parker", "Brandon Roy", "Pau Gasol", "Dirk Nowitzki", 
               "David West", "Shaquille O'Neal"]
 
-all_stars2010 = ["Allen Iverson", "Dwyane Wade", "LeBron James", "Kevin Garnett", "Dwight Howard", "Joe Johnson",
-              "Rajon Rondo", "Derrick Rose", "Paul Pierce", "Gerald Wallace", "Chris Bosh", "Al Horford", 
-              "David Lee", "Steve Nash", "Kobe Bryant", "Carmelo Anthony", "Tim Duncan", "Amar'e Stoudemire",
-              "Chauncey Billups", "Jason Kidd", "Chris Paul", "Brandon Roy", "Deron Williams", "Kevin Durant", 
-              "Dirk Nowitzki", "Zach Randolph", "Pau Gasol", "Chris Kaman"]
+all_stars2010 = ["Allen Iverson", "Dwyane Wade", "LeBron James", "Kevin Garnett", "Dwight Howard", 
+                 "Joe Johnson", "Rajon Rondo", "Derrick Rose", "Paul Pierce", "Gerald Wallace", 
+                 "Chris Bosh", "Al Horford", "David Lee", "Steve Nash", "Kobe Bryant", 
+                 "Carmelo Anthony", "Tim Duncan", "Amar'e Stoudemire", "Chauncey Billups", 
+                 "Jason Kidd", "Chris Paul", "Brandon Roy", "Deron Williams", "Kevin Durant",
+                 "Dirk Nowitzki", "Zach Randolph", "Pau Gasol", "Chris Kaman"]
 
-all_stars2011 = ["Derrick Rose", "Dwyane Wade", "LeBron James", "Amar'e Stoudemire", "Dwight Howard", "Ray Allen",
-              "Chris Bosh", "Kevn Garnett", "Al Horford", "Joe Johnson", "Paul Pierce", "Rajon Rondo",
-              "Chris Paul", "Kobe Bryant", "Kevin Durant", "Carmelo Anthony", "Yao Ming", "Tim Duncan", 
-              "Pau Gasol", "Manu Ginobili", "Blake Griffin", "Kevin Love", "Dirk Nowitzki", "Russell Westbrook", 
-              "Deron Williams"]
+all_stars2011 = ["Derrick Rose", "Dwyane Wade", "LeBron James", "Amar'e Stoudemire", 
+                 "Dwight Howard", "Ray Allen", "Chris Bosh", "Kevn Garnett", "Al Horford", 
+                 "Joe Johnson", "Paul Pierce", "Rajon Rondo", "Chris Paul", "Kobe Bryant", 
+                 "Kevin Durant", "Carmelo Anthony", "Yao Ming", "Tim Duncan", "Pau Gasol", 
+                 "Manu Ginobili", "Blake Griffin", "Kevin Love", "Dirk Nowitzki", 
+                 "Russell Westbrook", "Deron Williams"]
 
-all_stars2012 = ["Chris Paul", "Kobe Bryant", "Kevin Durant", "Blake Griffin", "Andrew Bynum", "LaMarcus Aldridge", 
-              "Marc Gasol", "Kevin Love", "Steve Nash", "Dirk Nowitzki", "Tony Parker", "Russell Westbrook",
-              "Derrick Rose", "Dwyane Wade", "LeBron James", "Carmelo Anthony", "Dwight Howard", "Chris Bosh",
-              "Luol Deng", "Roy Hibbert", "Andre Iguodala", "Joe Johnson", "Paul Pierce", "Rajon Rondo",
-              "Deron Williams"]
+all_stars2012 = ["Chris Paul", "Kobe Bryant", "Kevin Durant", "Blake Griffin", "Andrew Bynum", 
+                 "LaMarcus Aldridge", "Marc Gasol", "Kevin Love", "Steve Nash", "Dirk Nowitzki", 
+                 "Tony Parker", "Russell Westbrook", "Derrick Rose", "Dwyane Wade", "LeBron James", 
+                 "Carmelo Anthony", "Dwight Howard", "Chris Bosh", "Luol Deng", "Roy Hibbert", 
+                 "Andre Iguodala", "Joe Johnson", "Paul Pierce", "Rajon Rondo", "Deron Williams"]
 
-all_stars2013 = ["Rajon Rondo", "Dwyane Wade", "LeBron James", "Carmelo Anthony", "Kevin Garnett", "Chris Bosh", 
-               "Tyson Chandler", "Luol Deng", "Paul George", "Jrue Holiday", "Kyrie Irving", "Joakim Noah", 
-              "Brook Lopez", "Chris Paul", "Kobe Bryant", "Kevin Durant", "Blake Griffin", "Dwight Howard",
-              "LaMarcus Aldridge", "Tim Duncan", "James Harden", "David Lee", "Tony Parker", "Zach Randolph",
-              "Russell Westbrook"]
+all_stars2013 = ["Rajon Rondo", "Dwyane Wade", "LeBron James", "Carmelo Anthony", "Kevin Garnett", 
+                 "Chris Bosh", "Tyson Chandler", "Luol Deng", "Paul George", "Jrue Holiday", 
+                 "Kyrie Irving", "Joakim Noah", "Brook Lopez", "Chris Paul", "Kobe Bryant", 
+                 "Kevin Durant", "Blake Griffin", "Dwight Howard", "LaMarcus Aldridge", "Tim Duncan", 
+                 "James Harden", "David Lee", "Tony Parker", "Zach Randolph", "Russell Westbrook"]
 
-all_stars2014 = ["Dwyane Wade", "Kyrie Irving", "LeBron James", "Paul George", "Carmelo Anthony", "Joakim Noah", 
-               "Roy Hibbert", "Chris Bosh", "Paul Millsap", "John Wall", "Joe Johnson", "DeMar DeRozan", 
-              "Stephen Curry", "Kobe Bryant", "Kevin Durant", "Blake Griffin", "Kevin Love", "Dwight Howard",
-              "LaMarcus Aldridge", "Dirk Nowitzki", "Chris Paul", "James Harden", "Tony Parker", "Damian Lillard",
-              "Anthony Davis"]
+all_stars2014 = ["Dwyane Wade", "Kyrie Irving", "LeBron James", "Paul George", "Carmelo Anthony", 
+                 "Joakim Noah", "Roy Hibbert", "Chris Bosh", "Paul Millsap", "John Wall", 
+                 "Joe Johnson", "DeMar DeRozan", "Stephen Curry", "Kobe Bryant", "Kevin Durant", 
+                 "Blake Griffin", "Kevin Love", "Dwight Howard", "LaMarcus Aldridge", "Dirk Nowitzki", 
+                 "Chris Paul", "James Harden", "Tony Parker", "Damian Lillard", "Anthony Davis"]
 
-all_stars2015 = ["John Wall", "Kyle Lowry", "LeBron James", "Pau Gasol", "Carmelo Anthony", "Al Horford", "Chris Bosh",
-              "Paul Millsap", "Jimmy Butler", "Dwyane Wade", "Jeff Teague", "Kyrie Irving", "Kyle Korver", 
-              "Stephen Curry", "Kobe Bryant", "Anthony Davis", "Marc Gasol", "Blake Griffin", "LaMarcus Aldridge",
-              "Tim Duncan", "Kevin Durant", "Klay Thompson", "Russell Westbrook", "James Harden", "Chris Paul",
-              "DeMarcus Cousins", "Damian Lillard", "Dirk Nowitzki"]
+all_stars2015 = ["John Wall", "Kyle Lowry", "LeBron James", "Pau Gasol", "Carmelo Anthony", 
+                 "Al Horford", "Chris Bosh","Paul Millsap", "Jimmy Butler", "Dwyane Wade", 
+                 "Jeff Teague", "Kyrie Irving", "Kyle Korver", "Stephen Curry", "Kobe Bryant", 
+                 "Anthony Davis", "Marc Gasol", "Blake Griffin", "LaMarcus Aldridge", 
+                 "Tim Duncan", "Kevin Durant", "Klay Thompson", "Russell Westbrook", 
+                 "James Harden", "Chris Paul","DeMarcus Cousins", "Damian Lillard", 
+                 "Dirk Nowitzki"]
 
-all_stars2016 = ["LaMarcus Aldridge", "Kobe Bryant", "DeMarcus Cousins", "Stephen Curry", "Anthony Davis", "Kevin Durant",
-              "Draymond Green", "James Harden", "Kawhi Leonard", "Chris Paul", "Klay Thompson", "Russell Westbrook",
-              "Carmelo Anthony", "Chris Bosh", "Jimmy Butler", "DeMar DeRozan", "Andre Drummond", "Pau Gasol", "Paul George",
-              "Al Horford", "LeBron James", "Kyle Lowry", "Paul Millsap", "Isaiah Thomas", "Dwyane Wade", "John Wall"]
+all_stars2016 = ["LaMarcus Aldridge", "Kobe Bryant", "DeMarcus Cousins", "Stephen Curry", 
+                 "Anthony Davis", "Kevin Durant", "Draymond Green", "James Harden", 
+                 "Kawhi Leonard", "Chris Paul", "Klay Thompson", "Russell Westbrook",
+                 "Carmelo Anthony", "Chris Bosh", "Jimmy Butler", "DeMar DeRozan", 
+                 "Andre Drummond", "Pau Gasol", "Paul George","Al Horford", "LeBron James", 
+                 "Kyle Lowry", "Paul Millsap", "Isaiah Thomas", "Dwyane Wade", "John Wall"]
 
-all_stars2017 = ["Giannis Antetokounmpo", "Carmelo Anthony", "Jimmy Butler", "DeMar DeRozan", "Paul George", "Kyrie Irving",
-               "LeBron James", "Kevin Love", "Kyle Lowry", "Paul Millsap", "Isaiah Thomas", "Kemba Walker", "John Wall",
-               "DeMarcus Cousins", "Stephen Curry", "Anthony Davis", "Kevin Durant", "Marc Gasol", "Draymond Green", 
-               "James Harden", "Gordon Hayward", "DeAndre Jordan", "Kawhi Leonard", "Klay Thompson", "Russell Westbrook"]
+all_stars2017 = ["Giannis Antetokounmpo", "Carmelo Anthony", "Jimmy Butler", "DeMar DeRozan", 
+                 "Paul George", "Kyrie Irving", "LeBron James", "Kevin Love", "Kyle Lowry", 
+                 "Paul Millsap", "Isaiah Thomas", "Kemba Walker", "John Wall", "DeMarcus Cousins", 
+                 "Stephen Curry", "Anthony Davis", "Kevin Durant", "Marc Gasol", "Draymond Green", 
+                 "James Harden", "Gordon Hayward", "DeAndre Jordan", "Kawhi Leonard", "Klay Thompson", 
+                 "Russell Westbrook"]
                 
-all_stars2018 = ["DeMarcus Cousins", "Anthony Davis", "Kevin Durant", "Kyrie Irving", "LeBron James", "LaMarcus Aldridge", 
-               "Bradley Beal", "Goran Dragic", "Andre Drummond", "Paul George", "Kevin Love", "Victor Oladipo", 
-               "Kristaps Porzingis", "Kemba Walker", "John Wall", "Russell Westbrook", "Giannis Antetokounmpo", 
-               "Stephen Curry", "DeMar DeRozan", "Joel Embiid", "James Harden", "Jimmy Butler", "Draymond Green", 
-               "Al Horford", "Damian Lillard", "Kyle Lowry", "Klay Thompson", "Karl-Anthony Towns"]
+all_stars2018 = ["DeMarcus Cousins", "Anthony Davis", "Kevin Durant", "Kyrie Irving", "LeBron James", 
+                 "LaMarcus Aldridge", "Bradley Beal", "Goran Dragic", "Andre Drummond", "Paul George", 
+                 "Kevin Love", "Victor Oladipo", "Kristaps Porzingis", "Kemba Walker", "John Wall", 
+                 "Russell Westbrook", "Giannis Antetokounmpo", "Stephen Curry", "DeMar DeRozan", 
+                 "Joel Embiid", "James Harden", "Jimmy Butler", "Draymond Green", "Al Horford", 
+                 "Damian Lillard", "Kyle Lowry", "Klay Thompson", "Karl-Anthony Towns"]
 
-all_stars = [all_stars2008, all_stars2009, all_stars2010, all_stars2011, all_stars2012, all_stars2013, all_stars2014, 
-            all_stars2015, all_stars2016, all_stars2017, all_stars2018, ]
+all_stars = [all_stars2008, all_stars2009, all_stars2010, all_stars2011, all_stars2012, all_stars2013, 
+             all_stars2014, all_stars2015, all_stars2016, all_stars2017, all_stars2018, ]
 
 
 # The code below adds the All-Star variable to each of the 10 datasets for the 10 NBA seasons.
